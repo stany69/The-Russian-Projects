@@ -1,0 +1,650 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}  
+
+
+/* oswald-regular - cyrillic-ext */
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/oswald-v49-cyrillic-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/oswald-v49-cyrillic-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* oswald-500 - cyrillic-ext */
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('../fonts/oswald-v49-cyrillic-ext-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/oswald-v49-cyrillic-ext-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* oswald-700 - cyrillic-ext */
+  @font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/oswald-v49-cyrillic-ext-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/oswald-v49-cyrillic-ext-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* open-sans-regular - latin_cyrillic-ext */
+  @font-face {
+     font-family: 'Open Sans';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+          url('../fonts/open-sans-v34-latin_cyrillic-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/open-sans-v34-latin_cyrillic-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
+  :root{
+     --white:#FFFFFF;
+     --black:#000000;
+     --gray:#999999;
+     --accent:#F7654A;
+     --dark:#404149;
+     --lightGray:#F7F7F7;
+     --blackFooter:#404149;
+  }
+
+  html,body{
+     max-width: 1920px;
+     height: 3863px;
+     box-sizing: border-box;
+  }
+  .header{
+     width: 100%;
+     height: 740px;
+     box-sizing: border-box;
+  }
+  .header__wrapper{
+     width: 100%;
+     height: 100%;
+     background-image: url(./img/first-screen.svg);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-sizing: border-box;
+}
+
+    .wrapper__text-big{
+     width: 38.5%;
+     height: 171px;
+     position: absolute;
+   
+     top: 192px;
+     left: 30.75%;
+    }
+
+    .text__big{
+     font-family: 'Oswald';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 64px;
+     line-height: 85px;
+     text-align: center;
+     text-transform: uppercase;
+     letter-spacing: 0.02em;
+     color: #FFFFFF;
+
+    }
+    .wrapper__text-small{
+     width: 38.5%;
+     height: 22px;
+     left: 30.75%;
+     margin-top: 5em;
+     position: absolute;
+
+    }
+    
+    .text__small{
+     font-family: 'Oswald';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 27px;
+     text-align: center;
+     text-transform: uppercase;
+     color: #FFFFFF;
+    }
+
+    .wrapper__container{
+     width: 58%;
+     height: 300px;
+     background-color:#FFFFFF; 
+     position: absolute;
+     left: 21%;
+     top:  440px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+    }
+    .container__boxes{
+     width: 80%;
+     height: 60%;
+     display: flex;
+     justify-content:space-around;
+     align-items: center;
+    }
+    .containers{
+     width: 17.11%;
+     height: 186px;
+   
+     }
+
+                        
+     .cont__26{
+      font-family: 'Oswald';
+      font-style: normal;
+      font-weight: 500;
+      color: var(--accent);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 72px;
+      line-height: 107px;
+     }
+     .cont__let{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 36px;
+          line-height: 53px;
+          color:var(--black);
+     }
+     .cont__market{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500;
+          text-align: center;
+          text-transform: uppercase;
+          font-size: 18px;
+          line-height: 26.68px;
+          color:var(--gray);
+
+     }
+     .main{
+          width: 100%;
+          height: 3041px;
+     }
+     .main__wrapper{
+          width: 100%;
+          height: 100%;
+     }
+
+     .main__containers{
+          position: absolute;
+          width: 58%;
+       
+          left: 21%;
+     }
+     .our__projects{
+          height: 681px;
+          left: 21%;
+          top: 940px;
+     }
+     .main__request{
+          width: 100%;
+          height: 181px;
+          position: absolute;
+         
+          left: 0%;
+          top: 1821px;
+     }
+     .our__business-first{
+          
+          height: 359px;
+          top: 2150px;
+          }
+
+     .our__business-two{
+          height: 644px;
+          top: 2661px; 
+       }
+     .contacts{
+          height: 304px;
+          top: 3417px;
+     }
+     .our__projects-text{
+          width: 100%;
+          height: 43px;
+          top: 940px;
+          left: 706px;
+     }
+     .text__projects{
+          
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 53px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #404149;
+     }
+     .block__of-three{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 3em;
+          margin-right: 1.4em;
+     }
+     .three__blocks{
+          width: 350px;
+          height: 578px;
+          top: 1043px;
+     }
+     .links__gazprom{
+          width: 350px;
+          height: 380px;
+     }
+     
+     a:hover{
+         
+          background-color: brown;
+          
+     }
+     .orange__line{
+          width: 55px;
+          height: 6px;
+          top: 1468px;
+          left: 405px;
+          background: #F7654A;
+          margin-top: 2em;
+     }
+     .gazprom__head{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 35.57px;
+          color: var(--dark);
+          margin-top: 1em;
+
+
+     }
+     .gazprom__text{
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: var(--gray);
+          margin-top: 1.5em;
+     }
+     .main__request{
+          width: 100%;
+          height: 181px;
+          left: 0px;
+          top: 1821px;
+          background-color: #F7654A;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+     }
+     .text__block{
+          width: 30%;
+          height: 125px;
+          text-align: center;
+     }
+     .bold__text{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 71px;
+          letter-spacing: 0.02em;
+          color: var(--white);
+          width: 562px;
+          height: 57px;
+          left: 405px;
+          top: 1851px;  
+     }
+     .normal__text{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 36px;
+          letter-spacing: 0.02em;
+          color: var(--white);
+          width: 562px;
+          height: 29px;
+          left: 405px;
+          margin-top: 1em;
+     }
+     .btn__block{
+          width: 175px;
+          height: 49px;
+          background: #FFFFFF;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+
+     }
+     
+     .btn{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500; 
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: 0.05em;
+          color: var(--black);
+          background: var(--white);
+          border: none;
+     }
+     .block__head,.we__doing{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 53px;
+          text-transform: uppercase;
+          color: var(--black); 
+          text-align: center; 
+     }
+     .business__cont{
+          display:flex;
+          justify-content: space-between;
+          margin-top: 3em;
+     }
+     .business__cont-one{
+          width: 350px;
+          height: 250px;
+          background: var(--lightGray);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+     }
+     .building{
+         width: 60px;
+         height: 40px;
+     }
+     .text__build{
+          width: 172px;
+          height: 62px;
+          
+     }
+     .office__build{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 21px;
+          line-height: 31px;
+          letter-spacing: 0.02em;
+          color: var(--black); 
+          text-align: center; 
+          margin-top: 1em;
+     }
+     .contact__cont{
+          width: 100%;
+          height: 191px;
+          display: flex;
+          justify-content: space-between; 
+          margin-top: 3em;
+     }
+     .cont__unit{
+          width: 255px;
+          height: 191px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-around;
+     }
+     
+     .icon{
+        /*  font-family: 'Font Awesome 5 Pro';
+          width: 71px;
+          height: 54px;*/
+          color: #F7654A;
+     }
+     .resp__text,.text__action{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500; 
+          font-size: 24px;
+          line-height: 36px;
+          color:var(--gray);
+     }
+     .text__action{
+          color: var(--black);
+          width: 255px;
+          height: 72px;
+          text-align: center;
+}
+     .tel__num{
+          width: 181px;
+     }
+     .work__days{
+         line-height: 50px;
+
+
+     }
+     .work__time{
+          width: 181px;
+          margin-bottom: 0.5em;
+          line-height: 18px;
+     }
+     .cont__thirth{
+          width: 255px;
+          height: 191px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-evenly;
+          
+     }
+     .icon__thirth{
+        margin-bottom: 1em;
+
+
+     }
+     .text__thirth{
+          margin-top:0.5em;
+     }
+     .mail{
+          margin-top: 1em;
+     }
+     .mail__ad{
+          font-family: 'Oswald';
+          font-style: normal;
+          font-weight: 500; 
+          font-size: 24px;
+          line-height: 36px;
+          width: 255px;
+          height: 72px;
+          text-align: center;
+          color: var(--accent);
+          text-decoration: none;
+     }
+
+     .footer{
+          width: 100%;
+          height: 82px;
+          background-color:#404149;
+     }
+     .footer__wrapper{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+           align-items: center;
+          
+         height: 82px;
+     }
+     .company,.studia{
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: var(--white); 
+     }
+
+     @media(max-width: 1200px){
+          .html,body{
+               
+               height: auto;
+               
+          }
+          .main{
+               height: 7300px;
+          }
+          .wrapper__text-big {
+               width: 77.5%;
+               height: 171px;
+               position: absolute;
+               top: 73px;
+               left: 8.75%;
+           }
+           .our__projects {
+               height: auto;
+               left: 21%;
+               top: 820px;
+           }
+           .block__of-three {
+               width: 100%;
+               display: flex;
+               /* justify-content: space-around; */
+               align-items: center;
+               margin-top: 3em;
+               margin-right: 1.4em;
+               flex-direction: column;
+           }
+           .three__blocks{
+               margin-bottom: 4em;
+           }
+           
+           .orange__line {
+               margin-top: 1.5em;
+           }
+
+          .gazprom__head{
+               margin-top: 0.5em;
+          }
+          .gazprom__text{
+               margin-top: 1em;
+          }
+          .main__request{
+               top:2900px
+          }
+          .our__business-first{
+               top:3400px
+          }
+          .our__business-two{
+               top:4430px
+          }
+          .contacts{
+               top:6470px;
+               height: 1000px;
+               
+          }
+          .main__request {
+               top: 2900px;
+               height: 360px;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+           }
+           .text__block {
+               width: 47%;
+           }
+           
+
+           
+           .business__cont {
+               display: grid;
+               grid-template-columns: 1fr;
+               grid-gap: 2em;
+               margin-left: 10em;
+           }
+           .contact__cont{
+               display: grid;
+               grid-template-columns: 1fr;
+               margin-left: 14em;
+               grid-gap: 9em;
+               width: 290px;
+               margin-top: 9em;
+            }
+            .footer__wrapper {
+               width: 100%;
+               display: flex;
+               justify-content: space-evenly;
+               align-items: center;
+               height: 82px;
+           }
+          
+     }
+
+     @media(max-width: 800px){
+
+          .wrapper__text-small{
+               margin-top: 2em;
+          }
+          .our__projects-text{
+               height: 100px;
+          }
+          .text__block {
+               width: 73%;
+           }
+           .business__cont{
+               margin-left: 4em;
+           }
+           .contact__cont{
+               margin-left: 7em;
+           }
+           .footer__wrapper {
+               width: 92%;
+           }
+     }
